@@ -18,21 +18,20 @@
 
 .reset{
     width: 250px;
-    height: 100px;
+    height: 80px;
     border: none;
     cursor: pointer;
     border-radius: 50px;
     background: #1f3540;
     font-size: 26px;
     color: #26ffcb;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    
 }
 
 .boxes{
     display: flex;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     background: #1f3540;
     border: 4px solid #0f1b21;
     border-radius: 12px;
@@ -40,12 +39,22 @@
 }
 
 .board{
-    height: 600px;
-    width: 564px;
+    height: 400px;
+    width: 464px;
     display: flex;
     margin: auto;
+    
 }
 
+.boxes {
+    height: 100px;
+    width: 100px;
+}
 .boxes img{
-    margin: 50px 50px;
+    margin: 40px 40px;
+}
+
+.title img{
+    padding: 20px 20px;
+    height: 50px;
 }
