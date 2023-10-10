@@ -10,10 +10,15 @@ function App() {
   const [loading, setLoading]= useState(false);
 
   const fetchFood = async () => {
+    const APP_ID = "178d7e58";
+    const APP_KEY = "b9e10e10e33ca698c9db3bcfa97abc3f"
     try {
-      const res = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${APP_ID}&app_key=b9e10e10e33ca698c9db3bcfa97abc3f `)
+      const res = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${APP_ID}&app_key= ${APP_KEY}`);
+      const data = await res.json();
+      setAllFood(data.hits);
+      console.log(data.hits);
     } catch (error) {
-      
+      console.log(error);
     }
   }
 
@@ -22,6 +27,8 @@ function App() {
     <Navbar/>
     <Searchbar/>
     <ProductCard/>
+
+    
     </>
   )
 }
